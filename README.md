@@ -5,7 +5,7 @@
 </h1>
 <!-- Subtitle/Description -->
   
-#### Anotações referentes ao meu estudo sobre as tecnologias que envolvem o Desenvolvimento Web</h4>
+#### Anotações referentes ao meu estudo sobre as tecnologias que envolvem o Desenvolvimento Web
 *Com base no material disponibilizado pela [Rocketseat](https://rocketseat.com.br/) 🚀*
 <hr>
 
