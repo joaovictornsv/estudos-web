@@ -10,7 +10,7 @@
 Permite salvar informações não relacionais, apenas no formato chave-valor.
 
 O localStorage não tem habilidade de guardar vetores ou objetos dentro dele, apenas strings.
-Para contornar esse problema basta converter uma estrutura desse tipo para o formato JSON através da função: `JSON.stringify(objeto)`
+Para contornar esse problema basta converter uma estrutura desse tipo para o formato JSON através da função: **`JSON.stringify(objeto)`**
 
 
 ## Métodos do localStorage
@@ -24,7 +24,7 @@ Busca valores guardados no storage
 #### Sintaxe:
 <img src="https://i.imgur.com/phbqywR.png" width=500>
 
-**Obs:** No caso de a estrutura a ser buscada ser um objeto, basta usar a função `JSON.parse(objeto)` para coloca-lá no formato certo.
+**Obs:** No caso de a estrutura a ser buscada ser um objeto, basta usar a função **`JSON.parse(objeto)`** para coloca-lá no formato certo.
 
 ## Defininindo valores padrões para uma variável
 
