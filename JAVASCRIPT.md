@@ -17,17 +17,21 @@ Para contornar esse problema basta converter uma estrutura desse tipo para o for
 
 #### `.setItem`
 Guarda um novo valor no storage.
-Sintaxe: `.setItem(chave, valor)`
-
 
 #### `.getItem`
 Busca valores guardados no storage
-sintaxe: `.getItem(chave)`
+
+#### Sintaxe:
+<div  align="center">
+<img src="https://i.imgur.com/phbqywR.png" width=500>
+</div>
 
 **Obs:** No caso de a estrutura a ser buscada ser um objeto, basta usar a função `JSON.parse(objeto)` para coloca-lá no formato certo.
 
 ## Defininindo valores padrões para uma variável
 
-`var toDos = JSON.parse(localStorage.getItem('list_todos')) || [];`
+<div  align="center">
+<img src=https://i.imgur.com/bHFm4vd.png" width=80%>
+</div>
 
 O comando acima significa que, caso o localStorage não retorne um valor viável para ser manipulado, será guardado um array vazio na variável toDos 
