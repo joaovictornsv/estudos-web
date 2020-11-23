@@ -22,9 +22,7 @@ Guarda um novo valor no storage.
 Busca valores guardados no storage
 
 #### Sintaxe:
-<div  align="center">
 <img src="https://i.imgur.com/phbqywR.png" width=500>
-</div>
 
 **Obs:** No caso de a estrutura a ser buscada ser um objeto, basta usar a função `JSON.parse(objeto)` para coloca-lá no formato certo.
 
