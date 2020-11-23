@@ -5,7 +5,7 @@
 <hr>
 </div>
 
-# ◼️ Uso do localStorage
+# Uso do localStorage
 
 Permite salvar informações não relacionais, apenas no formato chave-valor.
 
