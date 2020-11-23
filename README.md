@@ -4,6 +4,7 @@
 <img  src="https://i.imgur.com/ZgjxOT4.png"  width="80%"><br/>
 </h1>
 <!-- Subtitle/Description -->
-<h4>Anotações referentes ao meu estudo sobre as tecnologias que envolvem o Desenvolvimento Web</h4>
-<p>
+  
+#### Anotações referentes ao meu estudo sobre as tecnologias que envolvem o Desenvolvimento Web</h4>
+*Com base no material disponibilizado pela [Rocketseat](https://rocketseat.com.br/) 🚀*
 </div>
