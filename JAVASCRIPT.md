@@ -32,4 +32,4 @@ Busca valores guardados no storage
 <img src=https://i.imgur.com/bHFm4vd.png" width=80%>
 </div>
 
-O comando acima significa que, caso o localStorage não retorne um valor viável para ser manipulado, será guardado um array vazio na variável toDos 
+O comando acima significa que, caso o localStorage não retorne um valor viável para ser manipulado, será guardado um array vazio na variável toDos.
