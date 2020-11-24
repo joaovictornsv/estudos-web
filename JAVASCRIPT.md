@@ -33,3 +33,83 @@ Busca valores guardados no storage
 </div>
 
 O comando acima significa que, caso o localStorage não retorne um valor viável para ser manipulado, será guardado um array vazio na variável toDos.
+
+<hr>
+
+# Requisições AJAX
+O AJAX é uma requisição assíncrona realizada em algum backend.
+
+## Início de uma requisição
+> ```
+> var xhr = new XMLHttpRequest();
+> // xhr.open('método', 'url do servidor')
+>xhr.open('GET',https:api.github.com/users/diego3g');
+>xhr.send(null);
+> ```
+
+
+## Esperando o retorno da requisição
+> ```
+> xhr.onreadystatechange = function() {
+> 	//xhr.readyState == 4 (variável que significa que a resposta da requisição retornou)
+> 	if (xhr.readyState === 4) {
+> 		console.log(JSON.parse(xhr.responseText))
+> 	}
+> }
+> ```
+
+<hr>
+
+# Promises
+
+Promises são funções que retornarão um resultado de sucesso ou erro só depois de um tempo. Essa funções não interferem no fluxo do script.
+
+## Definindo uma promisse
+>```
+> var minhaPromise = function() {
+>   return new Promise(function(resolve, reject) {
+> 	xhr.open('GET',https:api.github.com/users/diego3g');
+> 	xhr.send(null);
+> 		
+> 	xhr.onreadystatechange = function() {
+> 		//xhr.readyState == 4 (variável que significa que a resposta da requisição retornou)
+> 		if (xhr.readyState === 4) {
+> 			if (xhr.status === 200) {
+> 				// Status 200 é o código de sucesso da requisição
+> 				resolve(JSON.parse(xhr.responseText));
+> 			} else {
+> 				  reject('Erro na requisição')
+> 			  }
+> 		  }
+> 	  }
+>   })
+> }
+>```
+
+## Esperando resultado da Promise
+
+O Javascript não aguarda o retorno de uma promise para executar as prómixas linhas. Se rodarmos o código:
+
+```
+var resultado = minhaPromise();
+console.log(resultado)
+```
+
+O resultado no console será: `Promise {<pending>}`. Pois a promise não está finalizada.
+
+## Usando os dados retornados pela Promise
+O `.then` será executado quando o resolve da Promise for chamado.
+
+O `.catch` é executado quando o reject da Promise for chamado.
+
+>```
+> minhaPromise()
+> 
+> 	.then(function(response) {
+> 		// Código
+> 	})
+> 	
+> 	.catch(function(error) {
+> 		// Código
+> 	})
+>```
