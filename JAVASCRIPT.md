@@ -62,12 +62,12 @@ var resultado = minhaPromise();
 console.log(resultado)
 ```
 
-O resultado no console será: `Promise {<pending>}`. Pois a promise não está finalizada.
+O resultado no console será: **`Promise {<pending>}`**. Pois a promise não está finalizada.
 
 ## Usando os dados retornados pela Promise
-O `.then` será executado quando o resolve da Promise for chamado.
+O **`.then`** será executado quando o resolve da Promise for chamado.
 
-O `.catch` é executado quando o reject da Promise for chamado.
+O **`.catch`** é executado quando o reject da Promise for chamado.
 
 <img src="https://i.imgur.com/SjwbaeE.png" width=500>
 
@@ -81,7 +81,7 @@ Axios é uma biblioteca JS que facilita a escrita de uma requisição. Nada mais
 
 No arquivo HTML principal:
 
-`<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`
+**`<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`**
 
 No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
 
@@ -90,4 +90,4 @@ No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
 ## Retorno do axios
 Na requisição anterior (sem o uso do axios) o retorno, em caso de sucesso, era apenas os dados no formato JSON.
 
-Já utilizando o Axios, o retorno contém mais informações, como o headers e o request (XMLHttpRequest).
+Já utilizando o Axios, o retorno contém mais informações, como o headers e o request (*XMLHttpRequest*).
