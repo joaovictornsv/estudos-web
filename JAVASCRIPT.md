@@ -40,23 +40,10 @@ O comando acima significa que, caso o localStorage não retorne um valor viável
 O AJAX é uma requisição assíncrona realizada em algum backend.
 
 ## Início de uma requisição
-> ```
-> var xhr = new XMLHttpRequest();
-> // xhr.open('método', 'url do servidor')
->xhr.open('GET','https:api.github.com/users/diego3g');
->xhr.send(null);
-> ```
-
+<img src="https://i.imgur.com/DmzemDr.png" width=700>
 
 ## Esperando o retorno da requisição
-> ```
-> xhr.onreadystatechange = function() {
-> 	//xhr.readyState == 4 (variável que significa que a resposta da requisição retornou)
-> 	if (xhr.readyState === 4) {
-> 		console.log(JSON.parse(xhr.responseText))
-> 	}
-> }
-> ```
+<img src="https://i.imgur.com/5QfppUe.png" width=700>
 
 <hr>
 
@@ -65,29 +52,9 @@ O AJAX é uma requisição assíncrona realizada em algum backend.
 Promises são funções que retornarão um resultado de sucesso ou erro só depois de um tempo. Essa funções não interferem no fluxo do script.
 
 ## Definindo uma promisse
->```
-> var minhaPromise = function() {
->   return new Promise(function(resolve, reject) {
-> 	xhr.open('GET',https:api.github.com/users/diego3g');
-> 	xhr.send(null);
-> 		
-> 	xhr.onreadystatechange = function() {
-> 		//xhr.readyState == 4 (variável que significa que a resposta da requisição retornou)
-> 		if (xhr.readyState === 4) {
-> 			if (xhr.status === 200) {
-> 				// Status 200 é o código de sucesso da requisição
-> 				resolve(JSON.parse(xhr.responseText));
-> 			} else {
-> 				  reject('Erro na requisição')
-> 			  }
-> 		  }
-> 	  }
->   })
-> }
->```
+<img src="https://i.imgur.com/MZXf0Hp.png" width=80%>
 
 ## Esperando resultado da Promise
-
 O Javascript não aguarda o retorno de uma promise para executar as prómixas linhas. Se rodarmos o código:
 
 ```
@@ -102,17 +69,7 @@ O `.then` será executado quando o resolve da Promise for chamado.
 
 O `.catch` é executado quando o reject da Promise for chamado.
 
->```
-> minhaPromise()
-> 
-> 	.then(function(response) {
-> 		// Código
-> 	})
-> 	
-> 	.catch(function(error) {
-> 		// Código
-> 	})
->```
+<img src="https://i.imgur.com/SjwbaeE.png" width=500>
 
 <hr>
 
@@ -128,14 +85,7 @@ No arquivo HTML principal:
 
 No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
 
-> ```
-> axios.get('https:api.github.com/users/diego3g')
->	.then( response => {
->		//Código
->})
->	.catch( error => {
->		// Código
->	} )
+<img src="https://i.imgur.com/unPT9xA.png" width=700>
 
 ## Retorno do axios
 Na requisição anterior (sem o uso do axios) o retorno, em caso de sucesso, era apenas os dados no formato JSON.
