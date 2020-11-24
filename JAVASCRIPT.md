@@ -43,7 +43,7 @@ O AJAX é uma requisição assíncrona realizada em algum backend.
 > ```
 > var xhr = new XMLHttpRequest();
 > // xhr.open('método', 'url do servidor')
->xhr.open('GET',https:api.github.com/users/diego3g');
+>xhr.open('GET','https:api.github.com/users/diego3g');
 >xhr.send(null);
 > ```
 
@@ -113,3 +113,31 @@ O `.catch` é executado quando o reject da Promise for chamado.
 > 		// Código
 > 	})
 >```
+
+<hr>
+
+# Axios
+
+Axios é uma biblioteca JS que facilita a escrita de uma requisição. Nada mais é do que um encapsulamento em volta do XMLHttpRequest.
+
+## Usando o axios em um arquivo Javascript
+
+No arquivo HTML principal:
+
+`<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`
+
+No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
+
+> ```
+> axios.get('https:api.github.com/users/diego3g')
+>	.then( response => {
+>		//Código
+>})
+>	.catch( error => {
+>		// Código
+>	} )
+
+## Retorno do axios
+Na requisição anterior (sem o uso do axios) o retorno, em caso de sucesso, era apenas os dados no formato JSON.
+
+Já utilizando o Axios, o retorno contém mais informações, como o headers e o request (XMLHttpRequest).
