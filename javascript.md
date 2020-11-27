@@ -1,6 +1,6 @@
 <div  align="center">
 <!-- Top Image and Title -->
-<img  src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=black&color=ffe05d"  width="80%"><br/>
+<img  src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=black&color=ffe05d"  width="30%"><br/>
 
 <hr>
 </div>
