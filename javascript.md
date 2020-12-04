@@ -101,7 +101,7 @@ Já utilizando o Axios, o retorno contém mais informações, como o headers e o
 
 # Avaliação de Curto-Circuito
 
-## Usando operador '&&'
+## Usando operador `&&`
 Retorna o primeiro valor equivalente a **false** ou o último valor caso nenhum seja false.
 
 ```javascript
@@ -112,7 +112,7 @@ console.log(true && 'Oi')          //'Oi'
 console.log(true && true && 'Oi')  //'Oi'
 ```
 
-## Usando operador '||'
+## Usando operador `||`
 Retorna o primeiro valor equivalente a **true**.
 
 ```javascript
