@@ -19,7 +19,11 @@
 [![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](www.google.com)
 [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](www.google.com)
 [![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white)](www.google.com)
-[![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)](www.google.com)
+[![MySQL](https://img.shields.io/badge/mysql-%2313988a.svg?&style=for-the-badge&logo=mysql&logoColor=white)](www.google.com)
 
+<!--
+Commit Template
+📝 docs: ...
+-->
 
 </div>
