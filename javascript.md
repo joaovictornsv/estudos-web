@@ -2,6 +2,11 @@
 <!-- Top Image and Title -->
 <img  src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=black&color=ffe05d"  width="30%"><br/>
 
+<!--
+Commit Template
+📝 docs: ...
+-->
+
 <hr>
 </div>
 
@@ -91,3 +96,32 @@ No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
 Na requisição anterior (sem o uso do axios) o retorno, em caso de sucesso, era apenas os dados no formato JSON.
 
 Já utilizando o Axios, o retorno contém mais informações, como o headers e o request (*XMLHttpRequest*).
+
+<hr>
+
+# Avaliação de Curto-Circuito
+
+## Usando operador '&&'
+Retorna o primeiro valor equivalente a **false** ou o último valor caso nenhum seja false.
+
+```javascript
+console.log(false && 'Texto')         //false
+console.log(true && null && 'Texto')  //null
+
+console.log(true && 'Oi')          //'Oi'
+console.log(true && true && 'Oi')  //'Oi'
+```
+
+## Usando operador '||'
+Retorna o primeiro valor equivalente a **true**.
+
+```javascript
+let meuCarro = null
+console.log(meuCarro || 'Sem carro')               //'Sem carro'
+console.log(meuCarro || 'Sem carro' || undefined)  //'Sem carro'
+
+
+meuCarro = 'Celta'
+console.log(meuCarro || 'Sem carro')           //'Celta'
+console.log(false || meuCarro || 'Sem carro')  //'Celta'
+```
