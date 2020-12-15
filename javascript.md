@@ -5,6 +5,8 @@
 <!--
 Commit Template
 📝 docs: ...
+🖼 image: ...
+✏️ structure: ...
 -->
 
 <hr>
@@ -132,30 +134,121 @@ console.log(false || meuCarro || 'Sem carro')  //'Celta'
 
 ## Arrays
 
-> ```javascript
-> const numeros = [1, 2, 3];
-> const [a, b, c] =  numeros;
->
-> console.log(a, b, c) //1, 2, 3
-> ```
+```javascript
+const numeros = [1, 2, 3];
+const [a, b, c] =  numeros;
+
+console.log(a, b, c) //1, 2, 3
+```
 
 ## Objetos
 
-> ```javascript
-> const pesssoa = {
->    nome: 'João',
->    sobrenome: 'Victor',
->    idade: 18,
->    localizacao: {
->      nacao: 'Brasil',
->      cidade: 'Campina Grande'
->    },
->    ehEstudante: true;
->}
->
-> // Cria as variáveis 'nome', 'sobrenome' e 'idade' com o valor das chaves do objeto
-> const { nome, sobrenome, idade } = pessoa;
->
-> console.log(nome, sobrenome, idade) //João Victor 18
-> ```
+```javascript
+const pessoa = {
+   nome: 'João',
+   sobrenome: 'Victor',
+   idade: 18,
+   localizacao: {
+     nacao: 'Brasil',
+     cidade: 'Campina Grande'
+   },
+}
 
+// Cria as variáveis 'nome', 'sobrenome' e 'idade' com o valor das chaves do objeto
+const { nome, sobrenome, idade } = pessoa;
+console.log(nome, sobrenome, idade) //João Victor 18
+```
+
+## Valores padrões
+Caso a variável não exista no objeto/array a ser desestruturado, é possível definir valores padrões para as variáveis que estão sendo declaradas.
+
+```javascript
+const pessoa = {
+   // nome: 'João',
+   sobrenome: 'Victor',
+   idade: 18,
+}
+
+//Sem definir valor padrão = retorna 'undefined'
+const { nome, sobrenome, idade } = pessoa;
+console.log(nome, sobrenome, idade); //undefined Victor 18
+
+//Definindo valor padrão = retorna o valor definido
+const { nome = 'Sem nome', sobrenome, idade } = pessoa;
+console.log(nome, sobrenome, idade); //Sem nome Victor 18
+```
+
+## Alterando nome da variável
+Assim como na desestruturação com arrays, é possível escolher o nome das variáveis da desestruturação com objetos também:
+
+```javascript
+// Atribuindo o valor de 'nome' para a variável 'teste'
+const { nome: teste } = pessoa;
+console.log(teste) = 'João'
+```
+
+## Recebendo um objeto da desestruturação
+Utilizando o mesmo objeto de exemplo:
+```javascript
+const pessoa = {
+   nome: 'João',
+   sobrenome: 'Victor',
+   idade: 18,
+   localizacao: {
+     nacao: 'Brasil',
+     cidade: 'Campina Grande'
+   },
+}
+```
+#### Recendo o objeto completo:
+```javascript
+const { endereço } = pessoa;
+console.log(endereço); // {nacao: 'Brasil', cidade: 'Campina Grande'}
+```
+
+#### Desestruturando o objeto recebido:
+```javascript
+const { endereço: { nacao, cidade } } = pessoa;
+console.log(nacao, cidade); // Brasil Campina Grande
+```
+
+#### Estrutura completa de tudo que foi aprendido
+```javascript
+const { endereço: {
+  nacao: minhaNacao = 'Sem Nacionalidade',
+  cidade: minhaCidade = 'Sem cidade' 
+ }
+} = pessoa;
+
+console.log(minhaNacao, minhaCidade); //Brasil Campina Grande
+```
+
+## Operador rest (...rest)
+Usado para atribuir o restante do objeto/array para uma variável:
+
+#### Arrays:
+```javascript
+const numeros = [1, 2, 3, 4, 5];
+const [a, b, ...c] =  numeros;
+
+console.log(a) //1
+console.log(b) //2
+console.log(c) //[3, 4, 5]
+```
+
+#### Objetos:
+```javascript
+const pessoa = {
+   nome: 'João',
+   sobrenome: 'Victor',
+   idade: 18,
+   localizacao: {
+     nacao: 'Brasil',
+     cidade: 'Campina Grande'
+   },
+}
+
+const {nome, sobrenome, ...resto} = pessoa]
+console.log(nome, sobrenome) // João Victor
+console.log(resto) //{idade: 18, localizacao: {nacao: 'Brasil', cidade: 'Campina Grande'}
+```
