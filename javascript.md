@@ -125,3 +125,37 @@ meuCarro = 'Celta'
 console.log(meuCarro || 'Sem carro')           //'Celta'
 console.log(false || meuCarro || 'Sem carro')  //'Celta'
 ```
+
+<hr>
+
+# Atribuição via desestruturação
+
+## Arrays
+
+> ```javascript
+> const numeros = [1, 2, 3];
+> const [a, b, c] =  numeros;
+>
+> console.log(a, b, c) //1, 2, 3
+> ```
+
+## Objetos
+
+> ```javascript
+> const pesssoa = {
+>    nome: 'João',
+>    sobrenome: 'Victor',
+>    idade: 18,
+>    localizacao: {
+>      nacao: 'Brasil',
+>      cidade: 'Campina Grande'
+>    },
+>    ehEstudante: true;
+>}
+>
+> // Cria as variáveis 'nome', 'sobrenome' e 'idade' com o valor das chaves do objeto
+> const { nome, sobrenome, idade } = pessoa;
+>
+> console.log(nome, sobrenome, idade) //João Victor 18
+> ```
+
