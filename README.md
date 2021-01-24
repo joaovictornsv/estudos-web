@@ -6,7 +6,6 @@
 <!-- Subtitle/Description -->
   
 #### Anotações referentes ao meu estudo sobre as tecnologias que envolvem o Desenvolvimento Web
-*Com base no material disponibilizado pela [Rocketseat](https://rocketseat.com.br/) 🚀*
 <hr>
 
 #### Selecione um módulo<br>
