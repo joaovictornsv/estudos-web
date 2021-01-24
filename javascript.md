@@ -29,15 +29,19 @@ Guarda um novo valor no storage.
 Busca valores guardados no storage
 
 #### Sintaxe:
-<img src="https://i.imgur.com/phbqywR.png" width=500>
+```javascript
+localStorage.setItem(chave, valor)
+localStorage.getItem(chave)
+```
 
 **Obs:** No caso de a estrutura a ser buscada ser um objeto, basta usar a função **`JSON.parse(objeto)`** para coloca-lá no formato certo.
 
 ## Defininindo valores padrões para uma variável
 
-<div  align="center">
-<img src=https://i.imgur.com/bHFm4vd.png" width=80%>
-</div>
+```javascript
+var toDos = JSON.parse(localStorage.getItem('list_todos')) || [];
+```
+
 
 O comando acima significa que, caso o localStorage não retorne um valor viável para ser manipulado, será guardado um array vazio na variável toDos.
 
@@ -47,10 +51,24 @@ O comando acima significa que, caso o localStorage não retorne um valor viável
 O AJAX é uma requisição assíncrona realizada em algum backend.
 
 ## Início de uma requisição
-<img src="https://i.imgur.com/DmzemDr.png" width=700>
+```javascript
+var xhr = new XMLHttpRequest();
+
+//xhr.open('método', 'url do servidor')
+xhr.open('GET', 'https://api.github.com/users/joaovictornsv');
+xhr.send(null);
+```
 
 ## Esperando o retorno da requisição
-<img src="https://i.imgur.com/5QfppUe.png" width=700>
+```javascript
+xhr.onreadystatechange = function() {
+  //xhr.readyState == 4 (resposta da requisição retornou)
+  
+  if (xhr.readyState === 4) {
+    console.log(JSON.parse(xhr.responseText))  
+  }
+}
+```
 
 <hr>
 
@@ -59,12 +77,32 @@ O AJAX é uma requisição assíncrona realizada em algum backend.
 Promises são funções que retornarão um resultado de sucesso ou erro só depois de um tempo. Essa funções não interferem no fluxo do script.
 
 ## Definindo uma promisse
-<img src="https://i.imgur.com/MZXf0Hp.png" width=80%>
+```javascript
+var minhaPromise = function() {
+  return new Promise(function(resolve, reject) {
+    xhr.open('GET', 'https://api.github.com/users/joaovictornsv');
+    xhr.send(null);
+    
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        
+        if(xhr.status === 200) {
+          //Status 200 é o código de sucesso da requisição
+          resolve(JSON.parse(xhr.responseText));
+        }
+        else {
+          reject('Erro na requisição')
+        }
+      }
+    }
+  })
+}
+```
 
 ## Esperando resultado da Promise
 O Javascript não aguarda o retorno de uma promise para executar as prómixas linhas. Se rodarmos o código:
 
-```
+```javascript
 var resultado = minhaPromise();
 console.log(resultado)
 ```
@@ -76,7 +114,16 @@ O **`.then`** será executado quando o resolve da Promise for chamado.
 
 O **`.catch`** é executado quando o reject da Promise for chamado.
 
-<img src="https://i.imgur.com/SjwbaeE.png" width=500>
+```javascript
+minhaPromise()
+  .then(function(response) {
+    //código
+  })
+  
+  .catch(function(error) {
+    //código
+  })
+```
 
 <hr>
 
@@ -92,7 +139,16 @@ No arquivo HTML principal:
 
 No arquivo Javascript, a estrutura da nossa requisição ficará dessa forma:
 
-<img src="https://i.imgur.com/unPT9xA.png" width=700>
+```javascript
+axios.get('https://api.github.com/users/joaovictornsv')
+  .then(response => {
+    //código
+  })
+  
+  .catch(error => {
+    //código
+  })
+```
 
 ## Retorno do axios
 Na requisição anterior (sem o uso do axios) o retorno, em caso de sucesso, era apenas os dados no formato JSON.
