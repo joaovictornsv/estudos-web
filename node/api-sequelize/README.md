@@ -32,9 +32,10 @@ No package.json:
   },
 ```
 
-## Server.js
-Criando a pasta `src` e nela o arquivo `server.js`:
+### Server.js
+Criando a pasta `src` e nela o arquivos `server.js` e `routes.js`:
 
+**server.js**
 ```javascript
 const express = require('express');
 const routes = require('./routes');
@@ -47,8 +48,8 @@ app.use(routes);
 
 app.listen(3333); //Porta onde o servidor irá rodar.
 ```
-
-## Routes.js
+**routes.js**
+### Routes.js
 ```javascript
 const express = require('express');
 
@@ -70,3 +71,65 @@ Rodando `yarn dev` no terminal e acessando a porta, já é possível ver nossa a
   "hello": "world"
 }
 ```
+
+## Configuração e criação da database
+Na pasta `database`:
+**`index.js`**: onde será feita a conexão com o banco de dados.
+
+Na pasta `src`:
+**`config/database.js`**: armazena as credenciais de acesso ao banco de dados.
+
+**`database.js`**: irá exportar um objeto de configurações
+```javascript
+module.exports = {
+  dialect: 'postgres',
+  host: 'localhost',
+  username: 'postgres',
+  password: 'admin',
+  database: 'sqlnode',
+  define: {
+    // Indica que toda tabela do meu banco terá os campos: created_at e updated_at
+    timestamps: true,
+
+    // Fará uso do snake_case para nomear as tabelas
+    // Obs: por padrão o Sequelize utiliza o Pascal Case
+    underscored: true, 
+  },
+}
+```
+
+Por padrão, o Sequelize irá buscar o arquivo `config/config.json` para obter as configurações do banco de dados. Por isso vamos configurar o Sequelize para que ele busque as configurações no arquivo `config/database.js`:
+
+Na pasta raiz do projeto criaremos o arquivo `.sequelizerc`:
+```javascript
+const path = require('path');
+
+module.exports = {
+  config: path.resolve(__dirname, 'src', 'config', 'database.js');
+};
+```
+  
+### Criando a conexão com o banco de dados
+No arquivo `database/index.js`:
+```javascript
+const Sequelize = require('sequelize');
+const dbConfig = require('../config/database');
+
+//Conexão com o banco de dados
+const connection = new Sequelize(dbConfig);
+
+module.exports = connection;
+```
+
+### Criando o banco
+No terminal:
+```bash
+yarn sequelize db:create
+```
+
+Existem alguns programas que permite visualizar o banco e suas tabelas como:
+- [Beekeeper Studio](https://www.beekeeperstudio.io/)
+- [Postico](https://eggerapps.at/postico/)
+- [DBeaver](https://dbeaver.io/)
+
+## Criando tabelas e usando migrations
