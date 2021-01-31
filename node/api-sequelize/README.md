@@ -4,6 +4,7 @@
 - **MVC**: Sigla para o padrão *Model View Controller*.
 - **Model**: Define o modo como vai ser a comunicação com o banco de dados.
 
+---
 
 ## Iniciando a aplicação
 **Criando a pasta onde ficará o código**
@@ -69,6 +70,7 @@ Rodando `yarn dev` no terminal e acessando a porta, já é possível ver nossa a
   "hello": "world"
 }
 ```
+---
 
 ## Configuração e criação da database
 Na pasta `database`:<br/>
@@ -129,7 +131,7 @@ Existem alguns programas que permite visualizar o banco e suas tabelas como:
 - [Beekeeper Studio](https://www.beekeeperstudio.io/)
 - [Postico](https://eggerapps.at/postico/)
 - [DBeaver](https://dbeaver.io/)
-
+---
 ## Criando tabelas usando migrations
 De volta ao `.sequelizerc`, precisamos informar ao Sequelize onde serão mantidas as migrations da aplicação:
 ```javascript
@@ -229,4 +231,6 @@ Depois só corrigir o erro e executar o comando de migrations novamente.
 
 No entanto, caso sua aplicação já esteja em produção você não poderá voltar atrás. A melhor forma de contornar o erro é criando um nova migration responsável por isso.
 
+---
 ## Registrando dados no banco
+---
