@@ -6,7 +6,7 @@
 
 <a href='./eslint/README.md'>
 <img  src="https://img.shields.io/badge/-ESLint-4B32C3?style=flat&logoColor=fff&logo=eslint"  width="10%">
-</a>
+</a> &nbsp;
 <a href='./prettier/README.md'>
 <img  src="https://img.shields.io/badge/-Prettier-EA5E5E?style=flat&logoColor=fff&logo=prettier"  width="10%">
 </a>
