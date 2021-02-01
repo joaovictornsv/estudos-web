@@ -1,7 +1,6 @@
 <div  align="center">
 <!-- Top Image and Title -->
-<!-- <img  src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white&color=28df99"  width="30%"><br/> -->
+<img  src="https://img.shields.io/badge/-ESLint-4B32C3?style=flat&logoColor=fff&logo=eslint"  width="30%"><br/>
 
-  <h1>ESLint</h1>
 <hr>
 </div>
