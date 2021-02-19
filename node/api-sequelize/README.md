@@ -303,3 +303,32 @@ module.exports = {
   }
 }
 ```
+
+#### Outras funções
+Também é possível criar outras funções, como listar os usuários (GET), editar seus dados (PUT) ou deletá-lo (DELETE).
+Ex: Listagem de usuários `UserController.index`:
+```javascript
+module.exports = {
+  async  index(req, res) {
+    const  users  =  await  User.findAll();
+   return  res.json(users);
+  },
+  // outras funções
+}
+```
+
+### Importando as conexões com o banco
+Também é necessário importar as conexões com o banco, que estão no arquivo `database/index.js` dentro do arquivo `server.js`:
+```javascript
+const  express  =  require('express');
+const  routes  =  require('./routes');
+
+require('./database'); // Importando as conexões
+
+const  app  =  express();
+
+app.use(express.json());
+app.use(routes);
+
+app.listen(3333);
+```
