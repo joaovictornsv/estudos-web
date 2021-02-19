@@ -18,12 +18,12 @@ yarn init -y
 *Obs*: A flag `y` indica que queremos pular a sessão interativa e gera um `‎package.json` baseado no seu padrões
 
 ### Instalando as bibliotecas
-- Express
-- pg
-- ph-hstore
-- sequelize
-- sequelize-cli (desenvolvimento)
-- nodemon (desenvolvimento) (reinicia a aplicação a cada alteração)
+- express (Framework)
+- pg (postgres)
+- ph-hstore (postgres)
+- sequelize (ORM)
+- sequelize-cli (depend. de desenvolvimento)
+- nodemon (depend. de desenvolvimento) (reinicia a aplicação a cada alteração)
 
 ### Criando os arquivos iniciais
 No package.json:
