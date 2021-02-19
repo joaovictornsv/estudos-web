@@ -156,7 +156,7 @@ yarn sequelize migration:create --name=create-users
 Na pasta `migrations` você encontrará algo semelhante a isso:
 ```
 📁 migrations
-- 20191016131653-create-users.js
+➜ 🟨 20191016131653-create-users.js
 ```
 Esses números são o timestamp de quando a migration foi criada. Com isso vai sendo montado o histórico do seu banco de dados. As migrations são executadas de forma linear.
 
