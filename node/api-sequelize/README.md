@@ -1,3 +1,11 @@
+<div align="center">
+ <h1>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="node" width=80/> +
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original.svg" alt="sequelize" width=80/> +
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="postgres" width=80/>
+ </h1>
+</div>
+
 # Criando uma API com Sequelize
  [➜ Conceitos iniciais](#conceitos-iniciais)<br>
  [➜ Iniciando a aplicação](#iniciando-a-aplicação)<br>
