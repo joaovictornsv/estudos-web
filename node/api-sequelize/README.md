@@ -232,5 +232,66 @@ Depois só corrigir o erro e executar o comando de migrations novamente.
 No entanto, caso sua aplicação já esteja em produção você não poderá voltar atrás. A melhor forma de contornar o erro é criando um nova migration responsável por isso.
 
 ---
+
 ## Registrando dados no banco
----
+### Models
+Um model é a representação de como nossa aplicação vai se comunicar com a nossa base dados
+
+### Criando model de Usuário
+```
+📁 models
+➜ 🟨 User.js
+```
+
+Os models são representados através de classes. Essas classes extendem as propriedades da classe Model proveniente do Sequelize.
+
+```javascript
+const { Model } = require('sequelize');
+
+class User extends Model {
+
+}
+
+module.exports = User;
+```
+
+#### Configurando o model
+- Método `init()`: vai receber a conexão com  a base de dados e os campos da tabela que estamos referenciando.
+```javascript
+static init(sequelize) {
+  super.init({ //Chama o método init() da classe Model.
+    name: DataTypes.STRING, //Importar o DataTypes do Sequelize
+    email: DataTypes.STRING,
+  }, {
+    sequelize //conexão com o banco
+  })
+}
+```
+Obs: Não é necessário informar as colunas de id e timestamps.
+
+### Iniciando o model para realizar a conexão
+No arquivo `database/index.js`:
+```javascript
+const User = require('../models/User');
+User.init(connection);
+```
+### Criando uma rota de cadastro (POST)
+No arquivo `routes.js`:
+```javascript
+routes.post('/users', UserController.store);
+```
+A função de criação de users `UserController.store` será definida no arquivo `UserController.js`.
+Para isso criaremos uma pasta `controllers` em `src`:
+```
+📁 controllers
+➜ 🟨 UserController.js
+```
+
+Nos controllers que definiremos as funções que serão chamadas nas rotas, que podem ser dos tipos: GET, POST, PUT e DELETE.
+
+#### Definindo a função `UserController.store`:
+```javascript
+module.exports = {
+
+}
+```
