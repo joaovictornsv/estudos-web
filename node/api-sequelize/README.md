@@ -6,8 +6,6 @@
  </h1>
 </div>
 
----
-
 # Criando uma API com Sequelize
  [➜ Conceitos iniciais](#conceitos-iniciais)<br>
  [➜ Iniciando a aplicação](#iniciando-a-aplicação)<br>
@@ -15,6 +13,7 @@
  [➜ Criando tabelas usando migrations](#criando-tabelas-usando-migrations)<br>
  [➜ Registrando dados no banco](#registrando-dados-no-banco)
 
+---
 
 ## Conceitos iniciais
 <sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
