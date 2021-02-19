@@ -6,6 +6,8 @@
  </h1>
 </div>
 
+---
+
 # Criando uma API com Sequelize
  [➜ Conceitos iniciais](#conceitos-iniciais)<br>
  [➜ Iniciando a aplicação](#iniciando-a-aplicação)<br>
