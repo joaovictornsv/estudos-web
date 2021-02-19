@@ -1,5 +1,4 @@
 # Criando uma API com Sequelize
-
  [➜ Conceitos iniciais](#conceitos-iniciais)<br>
  [➜ Iniciando a aplicação](#iniciando-a-aplicação)<br>
  [➜ Configuração e criação da database](#configuração-e-criação-da-database)<br>
@@ -81,6 +80,7 @@ Rodando `yarn dev` no terminal e acessando a porta, já é possível ver nossa a
 ---
 
 ## Configuração e criação da database
+<sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
 Na pasta `database`:<br/>
 **`index.js`**: onde será feita a conexão com o banco de dados.
 
@@ -141,6 +141,7 @@ Existem alguns programas que permite visualizar o banco e suas tabelas como:
 - [DBeaver](https://dbeaver.io/)
 ---
 ## Criando tabelas usando migrations
+<sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
 De volta ao `.sequelizerc`, precisamos informar ao Sequelize onde serão mantidas as migrations da aplicação:
 ```javascript
 const path = require('path');
@@ -242,6 +243,7 @@ No entanto, caso sua aplicação já esteja em produção você não poderá vol
 ---
 
 ## Registrando dados no banco
+<sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
 ### Models
 Um model é a representação de como nossa aplicação vai se comunicar com a nossa base dados
 
