@@ -7,6 +7,7 @@
 
 
 ## Conceitos iniciais
+<sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
 - **Migrations**: Representam o "histórico" de alterações do banco de dados; a maneira como ele vai se comportar em tempo de aplicação.
 - **MVC**: Sigla para o padrão *Model View Controller*.
 - **Model**: Define o modo como vai ser a comunicação com o banco de dados.
@@ -14,6 +15,7 @@
 ---
 
 ## Iniciando a aplicação
+<sup>[Voltar ao topo](#criando-uma-api-com-sequelize)</sup><br>
 **Criando a pasta onde ficará o código**
 ```bash
 mkdir slqnode
