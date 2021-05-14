@@ -1,0 +1,3 @@
+João Victor;19;Campina Grande
+Lucas Bivar;18;João Pessoa
+Vinicius Medeiros;19;Esperança
